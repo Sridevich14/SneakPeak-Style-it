@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SneakPeak Sneak-in & Style-it</title>
+  <link rel="icon" class="icon" type="image" href="assets/icon.png">
+  <link rel="stylesheet" href="style.css"/>
+  <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+<body>
+    <header>
+        <h1 class="brand-title">Sneak<span class="highlight">Peak</span></h1>
+    </header>
+  <main class="product-page">
+    
+    <section class="product-gallery">
+      <!-- Main product image -->
+      <div class="main-image-container">
+        <img id="main-image" src="assets/product1-red.jpg" alt="Product Image" />
+      </div>
+      <!-- Scrollable thumbnails -->
+      <div class="thumbnail-container" tabindex="0" aria-label="Product image thumbnails">
+        <img class="thumbnail active" src="assets/product1-red.jpg" alt="Red Color" data-color="red" />
+        <img class="thumbnail" src="assets/product1-blue.jpeg" alt="Blue Color" data-color="blue" />
+        <img class="thumbnail" src="assets/product1-green.jpg" alt="Green Color" data-color="green" />
+        <img class="thumbnail" src="assets/product1-yellow.jpg" alt="Yellow Color" data-color="yellow" />
+        <img class="thumbnail" src="assets/product1-black.jpg" alt="Black Color" data-color="black" />
+      </div>
+    </section>
+
+    <section class="product-info">
+      <h1 class="product-title">Stylish Sneakers</h1>
+      <p class="product-price" id="price">$99.99</p>
+
+      <!-- Variant selectors -->
+      <div class="variants">
+
+        <!-- Color Swatches -->
+        <div class="color-variants">
+          <label>Color:</label>
+          <div class="swatches" role="radiogroup" aria-label="Select color">
+            <button class="swatch active" data-color="red" style="background-color:#d425a5" aria-checked="true" role="radio" tabindex="0" aria-label="Red"></button>
+            <button class="swatch" data-color="blue" style="background-color:#4c6aff" aria-checked="false" role="radio" tabindex="-1" aria-label="Blue"></button>
+            <button class="swatch" data-color="green" style="background-color:#4caf50" aria-checked="false" role="radio" tabindex="-1" aria-label="Green"></button>
+            <button class="swatch" data-color="yellow" style="background-color:#ffeb3b" aria-checked="false" role="radio" tabindex="-1" aria-label="Yellow"></button>
+            <button class="swatch" data-color="black" style="background-color:#000000" aria-checked="false" role="radio" tabindex="-1" aria-label="Black"></button>
+          </div>
+          <button id="compare-colors-btn" class="btn-link">Compare Colours</button>
+        </div>
+
+        <!-- Size Dropdown -->
+        <div class="size-variant">
+          <label for="size-select">Size:</label>
+          <select id="size-select" aria-label="Select size">
+            <option value="" disabled selected>Select size</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          <button id="size-chart-btn" class="btn-link">Size Chart</button>
+        </div>
+      </div>
+<div class="cart-controls">
+  <input type="number" class="qty-input" value="1" min="1" />
+  <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+</div>
+
+      <!-- Product bundle suggestion -->
+      <section class="product-bundle">
+        <h2>Buy these together</h2>
+        <div class="bundle-items">
+          <div class="bundle-item">
+            <img src="assets/product1-red.jpg" alt="Stylish Sneakers" />
+            <p>Sneakers - $99.99</p>
+          </div>
+          <div class="bundle-item">
+            <img src="assets/socks.jpeg" alt="Cool Socks" />
+            <p>Cool Socks - $15.99</p>
+          </div>
+          <div class="bundle-item">
+            <img src="assets/shoe-cleaner.webp" alt="Shoe Cleaner" />
+            <p>Shoe Cleaner - $9.99</p>
+          </div>
+        </div>
+        <p class="bundle-total">Bundle total: <strong>$125.97</strong></p>
+        <button class="btn-primary add-bundle-btn">Add Bundle to Cart</button>
+      </section>
+
+      <!-- Tabs for product info -->
+      <section class="product-tabs">
+        <div class="tabs">
+          <button class="tab active" data-tab="description" aria-selected="true" role="tab" tabindex="0">Description</button>
+          <button class="tab" data-tab="info" aria-selected="false" role="tab" tabindex="-1">Product Information</button>
+          <button class="tab" data-tab="shipping" aria-selected="false" role="tab" tabindex="-1">Shipping Details</button>
+        </div>
+        <div class="tab-content">
+          <div id="description" class="tab-panel active" role="tabpanel">
+            <p>Step into comfort, stride with style. These sneakers aren’t just worn — they’re lived in.<br>These stylish sneakers provide excellent comfort and durability for everyday wear.
+Designed with breathable materials, they keep your feet cool and fresh all day.
+The cushioned sole ensures optimal support, making them perfect for long walks or casual outings.
+
+            </p>
+          </div>
+          <div id="info" class="tab-panel" role="tabpanel" hidden>
+            <ul>
+              <p>Experience premium quality and style with this versatile product, designed to meet your everyday needs. Featuring multiple color and size options, it combines functionality with a sleek, modern look. Perfect for those who value both comfort and aesthetics in one package.</p>
+              <li>Material: Leather & Mesh</li>
+              <li>Weight: 0.8kg</li>
+              <li>Warranty: 1 year</li>
+            </ul>
+          </div>
+          <div id="shipping" class="tab-panel" role="tabpanel" hidden>
+            <p>Enjoy our free delivery!!<br>Free shipping on orders over $50.<br>Delivered within 5-7 business days.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Pair well with products carousel -->
+    <section class="pair-well-with">
+      <h2>Pair Well With</h2>
+      <div class="carousel" tabindex="0" aria-label="Pair well with products">
+        <div class="carousel-item">
+          <img src="assets/socks.jpeg" alt="Cool Socks" />
+          <p>Cool Socks</p>
+          <p>$15.99</p>
+          <div class="cart-controls">
+  <input type="number" class="qty-input" value="1" min="1" />
+  <button class="btn-secondary">Add to Cart</button>
+</div>
+
+        </div>
+        <div class="carousel-item">
+          <img src="assets/shoe-cleaner.webp" alt="Shoe Cleaner" />
+          <p>Shoe Cleaner</p>
+          <p>$9.99</p>
+          <div class="cart-controls">
+  <input type="number" class="qty-input" value="1" min="1" />
+  <button class="btn-secondary">Add to Cart</button>
+</div>
+
+        </div>
+        <div class="carousel-item">
+          <img src="assets/sports-cap.jpeg" alt="Sports Cap" />
+          <p>Sports Cap</p>
+          <p>$19.99</p>
+          <div class="cart-controls">
+  <input type="number" class="qty-input" value="1" min="1" />
+  <button class="btn-secondary">Add to Cart</button>
+</div>
+
+        </div>
+        <div class="carousel-item">
+          <img src="assets/water-bottle.jpg" alt="Water Bottle" />
+          <p>Water Bottle</p>
+          <p>$12.99</p>
+          <div class="cart-controls">
+  <input type="number" class="qty-input" value="1" min="1" />
+  <button class="btn-secondary">Add to Cart</button>
+</div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Related products grid -->
+    <section class="related-products">
+      <h2>Related Products</h2>
+      <div class="related-grid">
+        <div class="related-card">
+          <img src="assets/running-shoes.jpg" alt="Running Shoes" />
+          <p>Running Shoes</p>
+          <p>$89.99</p>
+          <span class="badge new">New</span>
+          <div class="cart-controls">
+  <input type="number" class="qty-input" value="1" min="1" />
+  <button class="btn-ter">Add to Cart</button>
+</div>
+
+        </div>
+        <div class="related-card">
+          <img src="assets/training-shoes.jpg" alt="Training Shoes" />
+          <p>Training Shoes</p>
+          <p>$79.99</p>
+          <span class="badge popular">Popular</span>
+          <div class="cart-controls">
+  <input type="number" class="qty-input" value="1" min="1" />
+  <button class="btn-ter">Add to Cart</button>
+</div>
+
+        </div>
+        <div class="related-card">
+          <img src="assets/flip-flops.jpg" alt="Flip Flops" />
+          <p>Flip Flops</p>
+          <p>$19.99</p>
+          <div class="cart-controls">
+  <input type="number" class="qty-input" value="1" min="1" />
+  <button class="btn-ter">Add to Cart</button>
+</div>
+
+        </div>
+        <div class="related-card">
+          <img src="assets/hiking-boots.webp" alt="Hiking Boots" />
+          <p>Hiking Boots</p>
+          <p>$129.99</p>
+          <div class="cart-controls">
+  <input type="number" class="qty-input" value="1" min="1" />
+  <button class="btn-ter">Add to Cart</button>
+</div>
+
+        </div>
+      </div>
+    </section>
+    <div class="thanks"><h3>Thank you!! Visit us again&#x2665;</h3></div>
+  </main>
+  <!-- Size Chart Modal -->
+  <div id="size-chart-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="size-chart-title" hidden>
+    <div class="modal-overlay" tabindex="-1"></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close size chart">&times;</button>
+      <h2 id="size-chart-title">Size Chart</h2>
+      <table>
+        <thead>
+          <tr><th>Size</th><th>Foot Length (inches)</th><th>Foot Width (inches)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>6</td><td>9.25"</td><td>3.5"</td></tr>
+          <tr><td>7</td><td>9.625"</td><td>3.75"</td></tr>
+          <tr><td>8</td><td>9.9375"</td><td>3.875"</td></tr>
+          <tr><td>9</td><td>10.25"</td><td>4"</td></tr>
+          <tr><td>10</td><td>10.5625"</td><td>4.125"</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Compare Colours Modal -->
+  <div id="compare-colors-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="compare-colors-title" hidden>
+    <div class="modal-overlay" tabindex="-1"></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close color comparison">&times;</button>
+      <h2 id="compare-colors-title">Compare Colours</h2>
+      <div class="color-compare-grid">
+        <div class="color-compare-item">
+          <img src="assets/product1-red.jpg" alt="Red Sneakers" />
+          <p>Red</p>
+        </div>
+        <div class="color-compare-item">
+          <img src="assets/product1-blue.jpg" alt="Blue Sneakers" />
+          <p>Blue</p>
+        </div>
+        <div class="color-compare-item">
+          <img src="assets/product1-green.jpg" alt="Green Sneakers" />
+          <p>Green</p>
+        </div>
+        <div class="color-compare-item">
+          <img src="assets/product1-yellow.jpg" alt="Yellow Sneakers" />
+          <p>Yellow</p>
+        </div>
+        <div class="color-compare-item">
+          <img src="assets/product1-black.jpg" alt="Black Sneakers" />
+          <p>Black</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+  <footer>
+    <div class="copyright">
+        &#169; 2003-2024, SneakPeak.com, Inc. or its affiliates</div>
+  </footer>
+ <script src="script.js"></script>
+</body>
+</html>
+
+
